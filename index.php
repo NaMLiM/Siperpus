@@ -64,7 +64,7 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Siperpus V1</a></li>
+              <li class="breadcrumb-item"><a href="#">Siperpus</a></li>
               <li class="breadcrumb-item active">Beranda</li>
             </ol>
           </div><!-- /.col -->
@@ -136,12 +136,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Control sidebar content goes here -->
-  </aside>
-  <!-- /.control-sidebar -->
 
   <!-- Main Footer -->
   <footer class="main-footer">
