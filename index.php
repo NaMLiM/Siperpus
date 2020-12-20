@@ -45,7 +45,7 @@
           <!-- Menu Body -->
           <!-- Menu Footer-->
           <li class="user-footer">
-            <a href="#" class="btn btn-default btn-flat float-right">Logout</a>
+            <a href="#" class="btn btn-default btn-block">Logout</a>
           </li>
         </ul>
       </li>
