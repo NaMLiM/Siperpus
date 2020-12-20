@@ -112,7 +112,7 @@
               <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user-plus"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Anggota Baru</span>
+                <span class="info-box-text">Anggota Baru Bulan Ini</span>
                 <span class="info-box-number">null</span>
               </div>
               <!-- /.info-box-content -->
@@ -148,7 +148,7 @@
     <strong>Copyright &copy; 2020 Akiestow Team.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0a-preview
+      <b>Siperpus Engine Version</b> 1.0a-preview
     </div>
   </footer>
 </div>
