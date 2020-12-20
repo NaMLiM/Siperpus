@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Log in (v2)</title>
+  <title>Siperpus | Log in</title>
+  <link rel="shortcut icon" type="image/jpg" href="assets/img/SiperpusLogo.png"/>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -19,7 +20,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="index.php" class="h1"><b>Siperpus</b>V1</a>
+      <a href="#" class="h1"><b>Siperpus</b>Auth</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Silahkan Login</p>
@@ -51,7 +52,9 @@
   <!-- /.card -->
 </div>
 <!-- /.login-box -->
-
+<div class="float-right d-none d-sm-inline-block">
+  <b>Siperpus Engine Version</b> 1.0a-preview
+</div>
 <!-- jQuery -->
 <script src="../../plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
