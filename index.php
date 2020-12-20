@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Siperpus | Dashboard</title>
+  <link rel="shortcut icon" type="image/jpg" href="assets/img/SiperpusLogo.png"/>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -14,15 +15,6 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="lib/css/adminlte.min.css">
 </head>
-<!--
-`body` tag options:
-
-  Apply one or more of the following classes to to the body tag
-  to get the desired effect
-
-  * sidebar-collapse
-  * sidebar-mini
--->
 <body class="hold-transition sidebar-collapse ">
 <div class="wrapper">
   <!-- Navbar -->
@@ -87,23 +79,22 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="card">
-              <div class="card-header border-0">
+              <div class="card-header border-1">
                 <div class="d-flex justify-content-between">
-                  <h3 class="card-title">Online Store Visitors</h3>
-                  <a href="javascript:void(0);">View Report</a>
+                  <h3 class="card-title">Statistik Peminjaman</h3>
                 </div>
               </div>
               <div class="card-body">
                 <div class="d-flex">
                   <p class="d-flex flex-column">
-                    <span class="text-bold text-lg">820</span>
-                    <span>Visitors Over Time</span>
+                    <span class="text-bold text-lg">null</span>
+                    <span>Peminjaman Bulan Ini</span>
                   </p>
                   <p class="ml-auto d-flex flex-column text-right">
                     <span class="text-success">
-                      <i class="fas fa-arrow-up"></i> 12.5%
+                      <i class="fas fa-arrow-up"></i> null
                     </span>
-                    <span class="text-muted">Since last week</span>
+                    <span class="text-muted">Preview</span>
                   </p>
                 </div>
                 <!-- /.d-flex -->
@@ -111,58 +102,29 @@
                 <div class="position-relative mb-4">
                   <canvas id="visitors-chart" height="200"></canvas>
                 </div>
-
-                <div class="d-flex flex-row justify-content-end">
-                  <span class="mr-2">
-                    <i class="fas fa-square text-primary"></i> This Week
-                  </span>
-
-                  <span>
-                    <i class="fas fa-square text-gray"></i> Last Week
-                  </span>
-                </div>
               </div>
             </div>
             <!-- /.card -->
           </div>
           <!-- /.col-md-6 -->
           <div class="col-lg-6">
-            <div class="card">
-              <div class="card-header border-0">
-                <div class="d-flex justify-content-between">
-                  <h3 class="card-title">Sales</h3>
-                  <a href="javascript:void(0);">View Report</a>
-                </div>
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user-plus"></i></span>
+
+              <div class="info-box-content">
+                <span class="info-box-text">Anggota Baru</span>
+                <span class="info-box-number">null</span>
               </div>
-              <div class="card-body">
-                <div class="d-flex">
-                  <p class="d-flex flex-column">
-                    <span class="text-bold text-lg">$18,230.00</span>
-                    <span>Sales Over Time</span>
-                  </p>
-                  <p class="ml-auto d-flex flex-column text-right">
-                    <span class="text-success">
-                      <i class="fas fa-arrow-up"></i> 33.1%
-                    </span>
-                    <span class="text-muted">Since last month</span>
-                  </p>
-                </div>
-                <!-- /.d-flex -->
+              <!-- /.info-box-content -->
+            </div>
+            <div class="info-box mb-3">
+              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users"></i></span>
 
-                <div class="position-relative mb-4">
-                  <canvas id="sales-chart" height="200"></canvas>
-                </div>
-
-                <div class="d-flex flex-row justify-content-end">
-                  <span class="mr-2">
-                    <i class="fas fa-square text-primary"></i> This year
-                  </span>
-
-                  <span>
-                    <i class="fas fa-square text-gray"></i> Last year
-                  </span>
-                </div>
+              <div class="info-box-content">
+                <span class="info-box-text">Jumlah Anggota</span>
+                <span class="info-box-number">null</span>
               </div>
+              <!-- /.info-box-content -->
             </div>
           </div>
           <!-- /.col-md-6 -->
@@ -186,7 +148,7 @@
     <strong>Copyright &copy; 2020 Akiestow Team.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 1.0a
+      <b>Version</b> 1.0a-preview
     </div>
   </footer>
 </div>
@@ -200,11 +162,9 @@
 <script src="lib/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE -->
 <script src="lib/js/adminlte.js"></script>
-
 <!-- OPTIONAL SCRIPTS -->
 <script src="lib/plugins/chart.js/Chart.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="lib/js/demo.js"></script>
+
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="lib/js/pages/dashboard3.js"></script>
 </body>
