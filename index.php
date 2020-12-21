@@ -134,6 +134,8 @@
       <!-- /.container-fluid -->
     </div>
     <!-- /.content -->
+
+    <!--Content-->
     <div class="content">
       <div class="container">
           <div class="row">
@@ -168,7 +170,29 @@
                 </div>
               </div>
               <!-- /.Pendaftaran-Anggota-->
-              
+
+              <!--Peminjaman-Buku-->
+              <div class="col-lg-3">
+                <div class="card">
+                  <a href="#">
+                    <div class="card-header border-1 ">
+                      <!--icon-book-->
+                      <div class="d-flex">
+                        <div class="info-box col-lg-5 elevation-0">
+                          <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-book"></i></span>
+                        </div>
+                      </div>
+                      <!--/.icon-book -->
+                      <div class="d-flex">
+                          <p class="d-flex flex-column">
+                            <span class="text-bold text-lg">Peminjaman Buku</span>
+                          </p>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- /.Peminjaman-Buku-->
             </div>
         </div>
     </div>
