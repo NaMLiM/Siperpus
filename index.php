@@ -134,6 +134,44 @@
       <!-- /.container-fluid -->
     </div>
     <!-- /.content -->
+    <div class="content">
+      <div class="container">
+          <div class="row">
+              <!--Pendaftaran-Anggota-->
+              <div class="col-lg-3">
+                <div class="card">
+                  <a href="addmember.php">
+                    <div class="card-header border-1 ">
+                      <!--icon-add-member-->
+                      <div class="d-flex">
+                        <div class="info-box col-lg-5 elevation-0">
+                          <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user-plus"></i></span>
+                        </div>
+                      </div>
+                      <!-- /.icon-add-member -->
+                      <div class="d-flex">
+                          <p class="d-flex flex-column">
+                            <span class="text-bold text-lg">Pendaftaran Anggota</span>
+                          </p>
+                        </div>
+                    </div>
+                  </a>
+                  <div class="card-body">
+                    <div class="d-flex">
+                      <p class="d-flex flex-column">
+                        <span>Anggota Baru Bulan Ini :</span>
+                        <span class="text-bold text-lg">null</span>
+                      </p>
+                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.Pendaftaran-Anggota-->
+              
+            </div>
+        </div>
+    </div>
   </div>
   <!-- /.content-wrapper -->
 
