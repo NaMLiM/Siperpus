@@ -184,10 +184,10 @@
                       </div>
                       <!--text-->
                       <div class="d-flex">
-                          <p class="d-flex flex-column">
-                            <span class="text-bold text-lg">Peminjaman Buku</span>
-                          </p>
-                        </div>
+                        <p class="d-flex flex-column">
+                          <span class="text-bold text-lg">Peminjaman Buku</span>
+                        </p>
+                      </div>
                     </div>
                   </a>
                 </div>
