@@ -182,7 +182,7 @@
                           <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-book"></i></span>
                         </div>
                       </div>
-                      <!--/.icon-book -->
+                      <!--text-->
                       <div class="d-flex">
                           <p class="d-flex flex-column">
                             <span class="text-bold text-lg">Peminjaman Buku</span>
