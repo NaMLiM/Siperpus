@@ -86,15 +86,15 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Nama</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Masukkan Nama Lengkap">
+                    <input class="form-control" type="text" placeholder="Masukkan nama">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Nomor Telepon</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Masukkan Nomor Telepon">
+                    <input class="form-control" type="text" placeholder="Masukkan nomor telepon">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Username</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Masukkan Username">
+                    <input class="form-control" type="text" placeholder="Masukkan Username">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Password</label>
