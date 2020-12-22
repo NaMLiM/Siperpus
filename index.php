@@ -107,7 +107,7 @@
           </div>
           <div class="col-lg-6">
             <div class="info-box mb-3">
-              <span class="info-box-icon btn-info elevation-1"><i class="fas fa-user-plus"></i></span>
+              <span class="info-box-icon btn-info elevation-1"><i class="fas fa-user"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Anggota Baru Bulan Ini</span>
@@ -142,7 +142,7 @@
           <!--Pendaftaran-Anggota-->
           <div class="col-lg-3">
             <div class="card">
-              <a href="addmember.php">
+              <a href="add-member.php">
                 <div class="card-header border-1">
                   <!--icon-->
                   <div class="d-flex justify-content-center">
@@ -170,7 +170,7 @@
                   <!--icon-->
                   <div class="d-flex justify-content-center">
                     <div class="info-box col-lg-5 elevation-0">
-                      <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-book"></i></span>
+                      <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-book-reader"></i></span>
                     </div>
                   </div>
                   <!--text-->
