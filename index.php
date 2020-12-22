@@ -142,7 +142,7 @@
           <!--Pendaftaran-Anggota-->
           <div class="col-lg-3">
             <div class="card">
-              <a href="add-member.php">
+              <a href="pages/add-member.php">
                 <div class="card-header border-1">
                   <!--icon-->
                   <div class="d-flex justify-content-center">
