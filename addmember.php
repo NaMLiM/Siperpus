@@ -78,14 +78,14 @@
       <div class="container">
           <div class="col-lg-12">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body p-5">
                 <div class="d-flex">
                   <p class="d-flex flex-column">
-                    <span class="text-lg">Nama :</span>
-                    <span class="text-lg">NIK :</span>
-                    <span class="text-lg">Nomor Telepon :</span>
-                    <span class="text-lg">Username :</span>
-                    <span class="text-lg">Password :</span>
+                    <span class="text-lg p-4">Nama :</span>
+                    <span class="text-lg p-4">NIK :</span>
+                    <span class="text-lg p-4">Nomor Telepon :</span>
+                    <span class="text-lg p-4">Username :</span>
+                    <span class="text-lg p-4">Password :</span>
                   </p>
                 </div>
               </div>
