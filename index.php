@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="lib/css/adminlte.min.css">
+  <!-- Custom -->
+  <link rel="stylesheet" href="lib/css/custom.css">
 </head>
 <body class="hold-transition sidebar-collapse ">
 <div class="wrapper">
@@ -21,9 +23,9 @@
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Sistem Informasi Perpustakaan</a>
-      </li>
+        <a href="#" class="navbar-brand">
+          Sistem Informasi Perpustakaan
+        </a>
     </ul>
 
     <!-- Right navbar links -->
@@ -61,15 +63,15 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0">Beranda</h1>
-          </div><!-- /.col -->
+          </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Siperpus</a></li>
               <li class="breadcrumb-item active">Beranda</li>
             </ol>
-          </div><!-- /.col -->
-        </div><!-- /.row -->
-      </div><!-- /.container-fluid -->
+          </div>
+        </div>
+      </div>
     </div>
     <!-- /.content-header -->
 
@@ -77,7 +79,7 @@
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="card">
               <div class="card-header border-1">
                 <div class="d-flex justify-content-between">
@@ -97,150 +99,138 @@
                     <span class="text-muted">Preview</span>
                   </p>
                 </div>
-                <!-- /.d-flex -->
-
                 <div class="position-relative mb-4">
                   <canvas id="visitors-chart" height="200"></canvas>
                 </div>
               </div>
             </div>
-            <!-- /.card -->
           </div>
-          <!-- /.col-md-6 -->
           <div class="col-lg-6">
             <div class="info-box mb-3">
-              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user-plus"></i></span>
+              <span class="info-box-icon btn-info elevation-1"><i class="fas fa-user-plus"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Anggota Baru Bulan Ini</span>
                 <span class="info-box-number">null</span>
               </div>
-              <!-- /.info-box-content -->
             </div>
+          </div>
+          <div class="col-lg-6">
             <div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-users"></i></span>
+              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
 
               <div class="info-box-content">
                 <span class="info-box-text">Jumlah Anggota</span>
                 <span class="info-box-number">null</span>
               </div>
-              <!-- /.info-box-content -->
             </div>
           </div>
-          <!-- /.col-md-6 -->
         </div>
-        <!-- /.row -->
       </div>
-      <!-- /.container-fluid -->
     </div>
     <!-- /.content -->
-
-    <!--Content-->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+            <h2 class="m-0">Control Panel</h2>
+        </div>
+      </div>
+    </div>
     <div class="content">
       <div class="container">
-          <div class="row">
-              <!--Pendaftaran-Anggota-->
-              <div class="col-lg-3">
-                <div class="card">
-                  <a href="addmember.php">
-                    <div class="card-header border-1">
-                      <!--icon-add-member-->
-                      <div class="d-flex justify-content-center">
-                        <div class="info-box col-lg-5 elevation-0">
-                          <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user-plus"></i></span>
-                        </div>
-                      </div>
-                      <!-- /.icon-add-member -->
-                      <div class="d-flex justify-content-center">
-                          <p class="d-flex flex-column">
-                            <span class="text-bold text-lg">Pendaftaran Anggota</span>
-                          </p>
-                        </div>
-                    </div>
-                  </a>
-                  <div class="card-body">
-                    <div class="d-flex">
-                      <p class="d-flex flex-column">
-                        <span>Anggota Baru Bulan Ini :</span>
-                        <span class="text-bold text-lg">null</span>
-                      </p>
-                    
+        <div class="row">
+          <!--Pendaftaran-Anggota-->
+          <div class="col-lg-3">
+            <div class="card">
+              <a href="addmember.php">
+                <div class="card-header border-1">
+                  <!--icon-->
+                  <div class="d-flex justify-content-center">
+                    <div class="info-box col-lg-5 elevation-0">
+                      <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user-plus"></i></span>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!-- /.Pendaftaran-Anggota-->
-
-              <!--Peminjaman-Buku-->
-              <div class="col-lg-3">
-                <div class="card">
-                  <a href="#">
-                    <div class="card-header border-1 ">
-                      <!--icon-book-->
-                      <div class="d-flex">
-                        <div class="info-box col-lg-5 elevation-0">
-                          <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-book"></i></span>
-                        </div>
-                      </div>
-                      <!--text-->
-                      <div class="d-flex">
-                        <p class="d-flex flex-column">
-                          <span class="text-bold text-lg">Peminjaman Buku</span>
-                        </p>
-                      </div>
+                  <!--text-->
+                  <div class="d-flex justify-content-center">
+                      <p class="d-flex flex-column">
+                        <span class="text-bold text-lg">Pendaftaran Anggota</span>
+                      </p>
                     </div>
-                  </a>
                 </div>
-              </div>
-              <!-- /.Peminjaman-Buku-->
-
-              <!--Pengembalian-Buku-->
-              <div class="col-lg-3">
-                <div class="card">
-                  <a href="#">
-                    <div class="card-header border-1 ">
-                      <!--icon-book-->
-                      <div class="d-flex">
-                        <div class="info-box col-lg-5 elevation-0">
-                          <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-book"></i></span>
-                        </div>
-                      </div>
-                      <!--text-->
-                      <div class="d-flex">
-                        <p class="d-flex flex-column">
-                          <span class="text-bold text-lg">Pengembalian Buku</span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <!-- /.Pengembalian-Buku-->
-
-              <!--Pencarian-Buku-->
-              <div class="col-lg-3">
-                <div class="card">
-                  <a href="#">
-                    <div class="card-header border-1 ">
-                      <!--icon-book-->
-                      <div class="d-flex">
-                        <div class="info-box col-lg-5 elevation-0">
-                          <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-search"></i></span>
-                        </div>
-                      </div>
-                      <!--text-->
-                      <div class="d-flex">
-                        <p class="d-flex flex-column">
-                          <span class="text-bold text-lg">Pencarian Buku</span>
-                        </p>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <!-- /.Pencarian-Buku-->
+              </a>
             </div>
+          </div>
+          <!-- /.Pendaftaran-Anggota-->
+
+          <!--Peminjaman-Buku-->
+          <div class="col-lg-3">
+            <div class="card">
+              <a href="#">
+                <div class="card-header border-1">
+                  <!--icon-->
+                  <div class="d-flex justify-content-center">
+                    <div class="info-box col-lg-5 elevation-0">
+                      <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-book"></i></span>
+                    </div>
+                  </div>
+                  <!--text-->
+                  <div class="d-flex justify-content-center">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">Peminjaman Buku</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- /.Peminjaman-Buku-->
+
+          <!--Pengembalian-Buku-->
+          <div class="col-lg-3">
+            <div class="card">
+              <a href="#">
+                <div class="card-header border-1">
+                  <!--icon-->
+                  <div class="d-flex justify-content-center">
+                    <div class="info-box col-lg-5 elevation-0">
+                      <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-book"></i></span>
+                    </div>
+                  </div>
+                  <!--text-->
+                  <div class="d-flex justify-content-center">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">Pengembalian Buku</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- /.Pengembalian-Buku-->
+
+          <!--Pencarian-Buku-->
+          <div class="col-lg-3">
+            <div class="card">
+              <a href="#">
+                <div class="card-header border-1">
+                  <!--icon-->
+                  <div class="d-flex justify-content-center">
+                    <div class="info-box col-lg-5 elevation-0">
+                      <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-search"></i></span>
+                    </div>
+                  </div>
+                  <!--text-->
+                  <div class="d-flex justify-content-center">
+                    <p class="d-flex flex-column">
+                      <span class="text-bold text-lg">Pencarian Buku</span>
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
   <!-- /.content-wrapper -->
@@ -257,7 +247,6 @@
 <!-- ./wrapper -->
 
 <!-- REQUIRED SCRIPTS -->
-
 <!-- jQuery -->
 <script src="lib/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
@@ -266,7 +255,6 @@
 <script src="lib/js/adminlte.js"></script>
 <!-- OPTIONAL SCRIPTS -->
 <script src="lib/plugins/chart.js/Chart.min.js"></script>
-
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="lib/js/pages/dashboard3.js"></script>
 </body>
