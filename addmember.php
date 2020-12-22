@@ -75,18 +75,23 @@
 
     <!-- Main content -->
     <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6">
-            
+      <div class="container">
+          <div class="col-lg-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-flex">
+                  <p class="d-flex flex-column">
+                    <span class="text-lg">Nama :</span>
+                    <span class="text-lg">NIK :</span>
+                    <span class="text-lg">Nomor Telepon :</span>
+                    <span class="text-lg">Username :</span>
+                    <span class="text-lg">Password :</span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- /.col-md-6 -->
-          <div class="col-lg-6">
-            
-          </div>
-          <!-- /.col-md-6 -->
-        </div>
-        <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
     </div>
