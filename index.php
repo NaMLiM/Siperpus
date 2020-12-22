@@ -216,6 +216,29 @@
                 </div>
               </div>
               <!-- /.Pengembalian-Buku-->
+
+              <!--Pencarian-Buku-->
+              <div class="col-lg-3">
+                <div class="card">
+                  <a href="#">
+                    <div class="card-header border-1 ">
+                      <!--icon-book-->
+                      <div class="d-flex">
+                        <div class="info-box col-lg-5 elevation-0">
+                          <span class="info-box-icon bg-warning elevation-1"><i class="fa fa-search"></i></span>
+                        </div>
+                      </div>
+                      <!--text-->
+                      <div class="d-flex">
+                        <p class="d-flex flex-column">
+                          <span class="text-bold text-lg">Pencarian Buku</span>
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- /.Pencarian-Buku-->
             </div>
         </div>
     </div>
