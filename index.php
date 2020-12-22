@@ -143,15 +143,15 @@
               <div class="col-lg-3">
                 <div class="card">
                   <a href="addmember.php">
-                    <div class="card-header border-1 ">
+                    <div class="card-header border-1">
                       <!--icon-add-member-->
-                      <div class="d-flex">
+                      <div class="d-flex justify-content-center">
                         <div class="info-box col-lg-5 elevation-0">
                           <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-user-plus"></i></span>
                         </div>
                       </div>
                       <!-- /.icon-add-member -->
-                      <div class="d-flex">
+                      <div class="d-flex justify-content-center">
                           <p class="d-flex flex-column">
                             <span class="text-bold text-lg">Pendaftaran Anggota</span>
                           </p>
