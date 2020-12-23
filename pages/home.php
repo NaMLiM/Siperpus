@@ -19,58 +19,6 @@
 <!-- /.content-header -->
 
 <!-- Main content -->
-<div class="content">
-    <div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-12">
-        <div class="card">
-            <div class="card-header border-1">
-            <div class="d-flex justify-content-between">
-                <h3 class="card-title">Statistik Peminjaman</h3>
-            </div>
-            </div>
-            <div class="card-body">
-            <div class="d-flex">
-                <p class="d-flex flex-column">
-                <span class="text-bold text-lg">null</span>
-                <span>Peminjaman Bulan Ini</span>
-                </p>
-                <p class="ml-auto d-flex flex-column text-right">
-                <span class="text-success">
-                    <i class="fas fa-arrow-up"></i> null
-                </span>
-                <span class="text-muted">Preview</span>
-                </p>
-            </div>
-            <div class="position-relative mb-4">
-                <canvas id="visitors-chart" height="200"></canvas>
-            </div>
-            </div>
-        </div>
-        </div>
-        <div class="col-lg-6">
-        <div class="info-box mb-3">
-            <span class="info-box-icon btn-info elevation-1"><i class="fas fa-user"></i></span>
-
-            <div class="info-box-content">
-            <span class="info-box-text">Anggota Baru Bulan Ini</span>
-            <span class="info-box-number">null</span>
-            </div>
-        </div>
-        </div>
-        <div class="col-lg-6">
-        <div class="info-box mb-3">
-            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-users"></i></span>
-
-            <div class="info-box-content">
-            <span class="info-box-text">Jumlah Anggota</span>
-            <span class="info-box-number">null</span>
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-</div>
 <!-- /.content -->
 <div class="content-header">
     <div class="container-fluid">
