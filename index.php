@@ -72,7 +72,7 @@
 
   <!-- Main Footer -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2020 Akiestow Team.</strong>
+    <strong>Copyright &copy; 2020 Kelompok 5 RPL-3C.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Siperpus Engine Version</b> 1.0a-preview
