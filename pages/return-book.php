@@ -56,7 +56,7 @@
                   <div class="col-sm-12">
                     <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="example2_info">
                       <thead>
-                      <tr role="row"><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">ID</th><th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Judul Buku</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Penulis Buku</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Persedian</th></tr>
+                      <tr role="row"><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">Waktu Pengembalian</th><th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Judul Buku</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Penulis Buku</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Nama Anggota</th></tr>
                       </thead>
                       <tbody>
                         <?php
@@ -67,18 +67,18 @@
                           $previous = $halaman - 1;
                           $next = $halaman + 1;
                           
-                          $data = mysqli_query($connection,"select * from buku");
+                          $data = mysqli_query($connection,"select * from riwayat_kembali");
                           $jumlah_data = mysqli_num_rows($data);
                           $total_halaman = ceil($jumlah_data / $batas);
 
-                          $select = mysqli_query($connection, "select * from buku limit $halaman_awal, $batas");
+                          $select = mysqli_query($connection, "select * from riwayat_kembali limit $halaman_awal, $batas");
                           while($data = mysqli_fetch_array($select)){
                               echo "
                                 <tr role='row'>
-                                  <td class='dtr-control' tabindex='0'>".$data["id_buku"]."</td>
+                                  <td class='dtr-control' tabindex='0'>".$data["waktu_kembali"]."</td>
                                   <td class='sorting_1'>".$data["nama_buku"]."</td>
                                   <td>".$data["penulis_buku"]."</td>
-                                  <td>".$data["stok_buku"]."</td>
+                                  <td>".$data["nama_anggota"]."</td>
                                 </tr>
                               ";
                           }
