@@ -102,7 +102,7 @@
         <!--Pencarian-Buku-->
         <div class="col-lg-3">
         <div class="card">
-            <a href="index.php?page=search">
+            <a href="index.php?page=search-book">
             <div class="card-header border-1">
                 <!--icon-->
                 <div class="d-flex justify-content-center">
