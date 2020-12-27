@@ -26,8 +26,8 @@
             <forma ction="../system/add-member-proses.php" method="post">
               <div class="card-body">
                 <div class="form-group">
-                  <label>ID Anggota</label>
-                  <input type="text" class="form-control" name="ID_anggota" placeholder="Masukkan ID anggota">
+                  <label>NIK</label>
+                  <input type="text" class="form-control" name="NIK" placeholder="Masukkan NIK">
                 </div>
                 <div class="form-group">
                   <label>ID Buku</label>
