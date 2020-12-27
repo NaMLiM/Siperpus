@@ -50,6 +50,11 @@
     <div class="row">
       <div class="col-12">
         <div class="card">
+        <div class="card-header">
+            <div class="row">
+              <h3 class="m-2">Riwayat</h3>
+            </div>
+          </div>
           <div class="card-body">
             <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
               <div class="row">
