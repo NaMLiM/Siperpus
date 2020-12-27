@@ -47,14 +47,14 @@
 
                           $select = mysqli_query($connection, "select * from buku limit $halaman_awal, $batas");
                           while($data = mysqli_fetch_array($select)){
-                              echo "
-                                <tr role='row'>
-                                  <td class='dtr-control' tabindex='0'>".$data["id_buku"]."</td>
-                                  <td class='sorting_1'>".$data["nama_buku"]."</td>
-                                  <td>".$data["penulis_buku"]."</td>
-                                  <td>".$data["stok_buku"]."</td>
-                                </tr>
-                              ";
+                            echo "
+                              <tr role='row'>
+                                <td class='dtr-control' tabindex='0'>".$data["id_buku"]."</td>
+                                <td class='sorting_1'>".$data["nama_buku"]."</td>
+                                <td>".$data["penulis_buku"]."</td>
+                                <td>".$data["stok_buku"]."</td>
+                              </tr>
+                            ";
                           }
                         ?>
                       </tbody>

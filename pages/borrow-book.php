@@ -21,28 +21,28 @@
   <!-- Main content -->
   <div class="content">
     <div class="container">
-        <div class="col-lg-12">
-          <div class="card">
-            <forma ction="../system/add-member-proses.php" method="post">
-              <div class="card-body">
-                <div class="form-group">
-                  <label>NIK</label>
-                  <input type="text" class="form-control" name="NIK" placeholder="Masukkan NIK">
-                </div>
-                <div class="form-group">
-                  <label>ID Buku</label>
-                  <input class="form-control" type="text" name="ID_buku" placeholder="Masukkan ID buku">
-                </div>
+      <div class="col-lg-12">
+        <div class="card">
+          <forma ction="../system/add-member-proses.php" method="post">
+            <div class="card-body">
+              <div class="form-group">
+                <label>NIK</label>
+                <input type="text" class="form-control" name="NIK" placeholder="Masukkan NIK">
               </div>
-              <!-- /.card-body -->
+              <div class="form-group">
+                <label>ID Buku</label>
+                <input class="form-control" type="text" name="ID_buku" placeholder="Masukkan ID buku">
+              </div>
+            </div>
+            <!-- /.card-body -->
 
-              <div class="card-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
-            </form>
-          </div>
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
         </div>
-        <!-- /.col-md-6 -->
+      </div>
+      <!-- /.col-md-6 -->
     </div>
     <!-- /.container-fluid -->
 
