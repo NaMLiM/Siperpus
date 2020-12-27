@@ -27,14 +27,6 @@
           <div class="card-body">
             <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
               <div class="row">
-                <div class="col-sm-12 col-md-6">
-
-                </div>
-                <div class="col-sm-12 col-md-6">
-
-                </div>
-              </div>
-              <div class="row">
                   <div class="col-sm-12">
                     <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="example2_info">
                       <thead>
@@ -93,17 +85,16 @@
                   </div>
                 </div>
               </div>
-              </div>
-              <!-- /.card-body -->
             </div>
-            <!-- /.card -->
-
-            <!-- /.card -->
+              <!-- /.card-body -->
           </div>
-          <!-- /.col -->
+            <!-- /.card -->
+            <!-- /.card -->
         </div>
-        <!-- /.row -->
+          <!-- /.col -->
       </div>
+        <!-- /.row -->
+    </div>
     <!-- /.container-fluid -->
   </div>
   <!-- /.content -->
