@@ -23,20 +23,20 @@
     <div class="container">
       <div class="col-lg-12">
         <div class="card">
-          <form action="../system/add-member-proses.php" method="post">
+          <form action="../system/borrow-proses.php" method="post">
             <div class="card-body">
               <div class="form-group">
                 <label>NIK</label>
-                <input type="text" class="form-control" name="NIK" placeholder="Masukkan NIK">
+                <input type="text" class="form-control" name="nik" placeholder="Masukkan NIK">
               </div>
               <div class="form-group">
                 <label>ID Buku</label>
-                <input class="form-control" type="text" name="ID_buku" placeholder="Masukkan ID buku">
+                <input class="form-control" type="text" name="id_buku" placeholder="Masukkan ID buku">
               </div>
             </div>
               <!-- /.card-body -->
             <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Submit Peminjaman</button>
+              <button type="submit" name="submit" class="btn btn-primary">Submit Peminjaman</button>
             </div>
           </form>
         </div>
