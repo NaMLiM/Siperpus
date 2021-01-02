@@ -6,7 +6,7 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $select = mysqli_query($connection, "select * from admin where username='$username' && password='$password'");
+    $select = mysqli_query($connection, "select * from admin where USERNAME='$username' && PASSWORD='$password'");
     $num = mysqli_num_rows($select);
 
     if($num == 0){
@@ -19,8 +19,8 @@
     }
     else{
         while($data = mysqli_fetch_array($select)){
-            $_SESSION["nama_admin"] = $data["nama_admin"];
-            $_SESSION["username"] = $data["username"];
+            $_SESSION["nama_admin"] = $data["NAMA_ADMIN"];
+            $_SESSION["username"] = $data["USERNAME"];
         }
         header("location:../index.php");
     }

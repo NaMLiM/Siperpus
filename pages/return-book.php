@@ -56,12 +56,12 @@
             </div>
           </div>
           <div class="card-body">
-            <div id="example2_wrapper" class="dataTables_wrapper dt-bootstrap4">
+            <div class="dataTables_wrapper dt-bootstrap4">
               <div class="row">
                   <div class="col-sm-12">
-                    <table id="example2" class="table table-bordered table-hover dataTable dtr-inline" role="grid" aria-describedby="example2_info">
+                    <table class="table table-bordered table-hover dataTable dtr-inline" role="grid">
                       <thead>
-                      <tr role="row"><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">Waktu Pengembalian</th><th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" aria-sort="descending">Judul Buku</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending">Penulis Buku</th><th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending">Nama Anggota</th></tr>
+                      <tr role="row"><th class="sorting" tabindex="0" rowspan="1" colspan="1">ID Pengembalian</th><th class="sorting_desc" tabindex="0" rowspan="1" colspan="1" aria-sort="descending">ID Peminjaman</th><th class="sorting" tabindex="0" rowspan="1" colspan="1">Waktu Pengembalian</th></tr>
                       </thead>
                       <tbody>
                         <?php
@@ -72,18 +72,17 @@
                           $previous = $halaman - 1;
                           $next = $halaman + 1;
                           
-                          $data = mysqli_query($connection,"select * from riwayat_kembali");
+                          $data = mysqli_query($connection,"select * from pengembalian");
                           $jumlah_data = mysqli_num_rows($data);
                           $total_halaman = ceil($jumlah_data / $batas);
 
-                          $select = mysqli_query($connection, "select * from riwayat_kembali limit $halaman_awal, $batas");
+                          $select = mysqli_query($connection, "select * from pengembalian limit $halaman_awal, $batas");
                           while($data = mysqli_fetch_array($select)){
                               echo "
                                 <tr role='row'>
-                                  <td class='dtr-control' tabindex='0'>".$data["waktu_kembali"]."</td>
-                                  <td class='sorting_1'>".$data["nama_buku"]."</td>
-                                  <td>".$data["penulis_buku"]."</td>
-                                  <td>".$data["nama_anggota"]."</td>
+                                  <td class='dtr-control' tabindex='0'>".$data["ID_PENGEMBALIAN"]."</td>
+                                  <td class='sorting_1'>".$data["ID_PEMINJAMAN"]."</td>
+                                  <td>".$data["WAKTU_PENGEMBALIAN"]."</td>
                                 </tr>
                               ";
                           }
@@ -94,22 +93,22 @@
                 </div>
                 <div class="row">
                   <div class="col-sm-12 col-md-12">
-                    <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                    <div class="dataTables_paginate paging_simple_numbers">
                       <ul class="pagination">
-                        <li class="paginate_button page-item previous" id="example2_previous">
-                          <a <?php if($halaman > 1){ echo "href='?page=borrow-book&halaman=$previous'"; } ?> aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+                        <li class="paginate_button page-item previous">
+                          <a <?php if($halaman > 1){ echo "href='?page=borrow-book&halaman=$previous'"; } ?> data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
                         </li>
                         <?php 
                           for($x=1;$x<=$total_halaman;$x++){
                         ?> 
                         <li class="paginate_button page-item">
-                          <a href="?page=borrow-book&halaman=<?php echo $x ?>" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link"><?php echo $x; ?></a>
+                          <a href="?page=borrow-book&halaman=<?php echo $x ?>" data-dt-idx="1" tabindex="0" class="page-link"><?php echo $x; ?></a>
                         </li>
                         <?php
                           }
                         ?>	
                         <li class="paginate_button page-item next" id="example2_next">
-                          <a <?php if($halaman < $total_halaman) { echo "href='?page=borrow-book&halaman=$next'"; } ?> aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
+                          <a <?php if($halaman < $total_halaman) { echo "href='?page=borrow-book&halaman=$next'"; } ?> data-dt-idx="7" tabindex="0" class="page-link">Next</a>
                         </li>
                       </ul>
                     </div>
