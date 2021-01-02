@@ -77,7 +77,7 @@
                         <?php
                           }
                         ?>	
-                        <li class="paginate_button page-item next>
+                        <li class="paginate_button page-item next">
                           <a <?php if($halaman < $total_halaman) { echo "href='?page=search-book&halaman=$next'"; } ?> data-dt-idx="7" tabindex="0" class="page-link">Next</a>
                         </li>
                       </ul>
