@@ -63,6 +63,13 @@ if (mysqli_num_rows($select) > 0) {
         while ($row = mysqli_fetch_assoc($select)) {
             $batas = $row['BATAS_PENGEMBALIAN'];
         }
+        if ($datenow > $batas) {
+        ?>
+            <script>
+                alert("Anda Harus Membayar Denda Rp.5000 !");
+            </script>
+        <?php
+        }
         $limit = date('Y-m-d', strtotime($batas . ' +3 day'));
         $update = mysqli_query($connection, "UPDATE peminjaman SET BATAS_PENGEMBALIAN = '$limit' WHERE ID_PEMINJAMAN = $id_peminjaman");
         if ($update) {
