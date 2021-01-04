@@ -28,7 +28,7 @@ if ($opsi == "Pengembalian") {
         if ($datenow > $date) {
 ?>
             <script>
-                alert("Anda Harus Membayar Denda Rp.5000");
+                alert("Anda Harus Membayar Denda Rp.5000 !");
             </script>
         <?php
         }
@@ -36,17 +36,17 @@ if ($opsi == "Pengembalian") {
         $delete = mysqli_query($connection, "DELETE FROM peminjaman WHERE ID_ANGGOTA = $id_anggota");
         ?>
         <script>
-            alert("Buku Berhasil Dikembalikan");
+            alert("Buku Berhasil Dikembalikan !");
             document.location = "../index.php";
         </script>
     <?php
     } else {
     ?>
         <script>
-            alert("Data Gagal Ditambahkan");
-            document.location = "../index.php?page=borrow-book";
+            alert("Buku Gagal Dikembalikan !");
+            document.location = "../index.php?page=return-book";
         </script>
-<?php
+        <?php
     }
 } else if ($opsi == "Perpanjangan") {
     if (mysqli_num_rows($select) > 0) {
@@ -56,6 +56,21 @@ if ($opsi == "Pengembalian") {
         }
         $limit = date('Y-m-d', strtotime($batas . ' +3 days'));
         $update = mysqli_query($connection, "UPDATE peminjaman SET BATAS_PENGEMBALIAN = $limit WHERE ID_PEMINJAMAN = $id_peminjaman");
+        if ($update) {
+        ?>
+            <script>
+                alert("Perpanjangan Berhasil !");
+                document.location = "../index.php";
+            </script>
+        <?php
+        } else {
+        ?>
+            <script>
+                alert("Perpanjangan Gagal !");
+                document.location = "../index.php?page=return-book";
+            </script>
+<?php
+        }
     }
 }
 ?>

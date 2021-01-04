@@ -12,14 +12,14 @@ $insert = mysqli_query($connection, "INSERT INTO anggota VALUES ('$id_anggota', 
 if ($insert) {
 ?>
     <script>
-        alert("Data Berhasil Ditambahkan");
+        alert("Pendaftaran Anggota Berhasil !");
         document.location = "../index.php";
     </script>
 <?php
 } else {
 ?>
     <script>
-        alert("Data Gagal Ditambahkan");
+        alert("Pendaftaran Anggota Gagal !");
         document.location = "../index.php?page=add-member";
     </script>
 <?php

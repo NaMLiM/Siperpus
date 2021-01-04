@@ -10,7 +10,7 @@ $check = mysqli_query($connection, "SELECT ID_ANGGOTA FROM peminjaman WHERE ID_A
 if (mysqli_num_rows($check) > 0) {
 ?>
     <script>
-        alert("Anda Sudah Meminjam!");
+        alert("Anda Sudah Meminjam !");
         document.location = "../index.php";
     </script>
     <?php
@@ -25,14 +25,14 @@ if (mysqli_num_rows($check) > 0) {
         $update = mysqli_query($connection, "UPDATE buku SET STOK_BUKU = $stok_buku WHERE ID_BUKU = $id_buku");
     ?>
         <script>
-            alert("Data Berhasil Ditambahkan");
+            alert("Peminjaman Berhasil !");
             document.location = "../index.php";
         </script>
     <?php
     } else {
     ?>
         <script>
-            alert("Data Gagal Ditambahkan");
+            alert("Peminjaman Gagal !");
             document.location = "../index.php?page=borrow-book";
         </script>
 <?php
