@@ -10,8 +10,8 @@ $select = mysqli_query($connection, "SELECT * FROM peminjaman WHERE ID_Buku = $i
 while ($row = mysqli_fetch_assoc($select)) {
     $id_peminjaman = $row['ID_PEMINJAMAN'];
 }
-if ($opsi == "Pengembalian") {
-    if (mysqli_num_rows($select) > 0) {
+if (mysqli_num_rows($select) > 0) {
+    if ($opsi == "Pengembalian") {
         $select = mysqli_query($connection, "SELECT ID_BUKU FROM peminjaman WHERE ID_PEMINJAMAN = $id_peminjaman");
         while ($row = mysqli_fetch_assoc($select)) {
             $id_buku = $row['ID_BUKU'];
@@ -30,26 +30,35 @@ if ($opsi == "Pengembalian") {
             <script>
                 alert("Anda Harus Membayar Denda Rp.5000 !");
             </script>
-        <?php
+            <?php
         }
         $update = mysqli_query($connection, "UPDATE buku SET STOK_BUKU = $stok_buku WHERE ID_BUKU = $id_buku");
         $delete = mysqli_query($connection, "DELETE FROM peminjaman WHERE ID_ANGGOTA = $id_anggota");
-        ?>
-        <script>
-            alert("Buku Berhasil Dikembalikan !");
-            document.location = "../index.php";
-        </script>
-    <?php
-    } else {
-    ?>
-        <script>
-            alert("Buku Gagal Dikembalikan !");
-            document.location = "../index.php?page=return-book";
-        </script>
+        if ($update) {
+            if ($delete) {
+            ?>
+                <script>
+                    alert("Buku Berhasil Dikembalikan !");
+                    document.location = "../index.php";
+                </script>
+            <?php
+            } else {
+            ?>
+                <script>
+                    alert("Buku Gagal Dikembalikan !");
+                    document.location = "../index.php";
+                </script>
+            <?php
+            }
+        } else {
+            ?>
+            <script>
+                alert("Stok Buku Gagal DiUpdate !");
+                document.location = "../index.php";
+            </script>
         <?php
-    }
-} else if ($opsi == "Perpanjangan") {
-    if (mysqli_num_rows($select) > 0) {
+        }
+    } else if ($opsi == "Perpanjangan") {
         $select = mysqli_query($connection, "SELECT BATAS_PENGEMBALIAN FROM peminjaman WHERE ID_PEMINJAMAN = $id_peminjaman");
         while ($row = mysqli_fetch_assoc($select)) {
             $batas = $row['BATAS_PENGEMBALIAN'];
@@ -59,18 +68,26 @@ if ($opsi == "Pengembalian") {
         if ($update) {
         ?>
             <script>
-                alert("Perpanjangan Berhasil !");
+                alert("Update Perpanjangan Berhasil !");
                 document.location = "../index.php";
             </script>
         <?php
         } else {
         ?>
             <script>
-                alert("Perpanjangan Gagal !");
+                alert("Update Perpanjangan Gagal !");
                 document.location = "../index.php?page=return-book";
             </script>
-<?php
+    <?php
         }
     }
+} else {
+    ?>
+    <script>
+        alert("ID Buku/Anggota Salah !");
+        document.location = "../index.php?page=return-book";
+    </script>
+<?php
 }
+
 ?>

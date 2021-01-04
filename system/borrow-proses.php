@@ -23,14 +23,23 @@ if (mysqli_num_rows($check) > 0) {
         }
         $stok_buku = (int)$stok - 1;
         $update = mysqli_query($connection, "UPDATE buku SET STOK_BUKU = $stok_buku WHERE ID_BUKU = $id_buku");
+        if ($update) {
     ?>
-        <script>
-            alert("Peminjaman Berhasil !");
-            document.location = "../index.php";
-        </script>
-    <?php
+            <script>
+                alert("Peminjaman Berhasil !");
+                document.location = "../index.php";
+            </script>
+        <?php
+        } else {
+        ?>
+            <script>
+                alert("Stok Buku Gagal DiUpdate !");
+                document.location = "../index.php";
+            </script>
+        <?php
+        }
     } else {
-    ?>
+        ?>
         <script>
             alert("Peminjaman Gagal !");
             document.location = "../index.php?page=borrow-book";
