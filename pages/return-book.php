@@ -25,9 +25,23 @@
                 <div class="card">
                     <form action="system/return-proses.php" method="post">
                         <div class="card-body">
-                            <div class="form-group">
-                                <label>ID Peminjaman</label>
+                        <div class="form-group">
+                                <label>ID Anggota</label>
                                 <input class="form-control" type="text" name="ID_Peminjaman" placeholder="Masukkan ID Buku">
+                            </div>
+                            <div class="form-group">
+                                <label>ID Buku</label>
+                                <input class="form-control" type="text" name="ID_Peminjaman" placeholder="Masukkan ID Buku">
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="opsi" value="Perpanjangan">
+                                    <label class="form-check-label">Perpanjangan</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="opsi" value="Pengembalian">
+                                    <label class="form-check-label">Pengembalian</label>
+                                </div>
                             </div>
                         </div>
                         <!-- /.card-body -->
