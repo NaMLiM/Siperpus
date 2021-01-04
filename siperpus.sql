@@ -99,16 +99,6 @@ CREATE TABLE `peminjaman` (
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pengembalian`
---
-
-CREATE TABLE `pengembalian` (
-  `ID_PENGEMBALIAN` int(11) NOT NULL,
-  `ID_PEMINJAMAN` int(11) DEFAULT NULL,
-  `WAKTU_PENGEMBALIAN` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
 -- Indexes for dumped tables
 --
 
@@ -139,13 +129,6 @@ ALTER TABLE `peminjaman`
   ADD KEY `FK_PEMINJAM_RELATIONS_ANGGOTA` (`ID_ANGGOTA`);
 
 --
--- Indeks untuk tabel `pengembalian`
---
-ALTER TABLE `pengembalian`
-  ADD PRIMARY KEY (`ID_PENGEMBALIAN`),
-  ADD KEY `ID_PEMINJAMAN` (`ID_PEMINJAMAN`);
-
---
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
@@ -162,12 +145,6 @@ ALTER TABLE `peminjaman`
   MODIFY `ID_PEMINJAMAN` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT untuk tabel `pengembalian`
---
-ALTER TABLE `pengembalian`
-  MODIFY `ID_PENGEMBALIAN` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
@@ -177,12 +154,6 @@ ALTER TABLE `pengembalian`
 ALTER TABLE `peminjaman`
   ADD CONSTRAINT `FK_PEMINJAM_RELATIONS_BUKU` FOREIGN KEY (`ID_BUKU`) REFERENCES `buku` (`ID_BUKU`),
   ADD CONSTRAINT `peminjaman_ibfk_1` FOREIGN KEY (`ID_ANGGOTA`) REFERENCES `anggota` (`ID_ANGGOTA`);
-
---
--- Ketidakleluasaan untuk tabel `pengembalian`
---
-ALTER TABLE `pengembalian`
-  ADD CONSTRAINT `pengembalian_ibfk_1` FOREIGN KEY (`ID_PEMINJAMAN`) REFERENCES `peminjaman` (`ID_PEMINJAMAN`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

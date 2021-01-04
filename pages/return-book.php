@@ -25,13 +25,13 @@
                 <div class="card">
                     <form action="system/return-proses.php" method="post">
                         <div class="card-body">
-                        <div class="form-group">
+                            <div class="form-group">
                                 <label>ID Anggota</label>
-                                <input class="form-control" type="text" name="ID_Peminjaman" placeholder="Masukkan ID Buku">
+                                <input class="form-control" type="text" name="ID_Anggota" placeholder="Masukkan ID Anggota">
                             </div>
                             <div class="form-group">
                                 <label>ID Buku</label>
-                                <input class="form-control" type="text" name="ID_Peminjaman" placeholder="Masukkan ID Buku">
+                                <input class="form-control" type="text" name="ID_Buku" placeholder="Masukkan ID Buku">
                             </div>
                             <div class="form-group">
                                 <div class="form-check">
