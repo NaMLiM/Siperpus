@@ -50,7 +50,7 @@
                             echo "
                               <tr role='row'>
                                 <td class='dtr-control' tabindex='0'>".$data["ID_BUKU"]."</td>
-                                <td class='sorting_1'>".$data["NAMA_BUKU"]."</td>
+                                <td>".$data["NAMA_BUKU"]."</td>
                                 <td>".$data["PENULIS_BUKU"]."</td>
                                 <td>".$data["STOK_BUKU"]."</td>
                               </tr>
