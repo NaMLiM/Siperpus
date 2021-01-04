@@ -2,7 +2,7 @@
 include("koneksi.php");
 
 $id_buku = $_POST["ID_Buku"];
-$id_anggota = $_POST["id_anggota"];
+$id_anggota = $_POST["ID_Anggota"];
 $datenow = date("Y-m-d");
 $limit = date('Y-m-d', strtotime('+3 days'));
 
