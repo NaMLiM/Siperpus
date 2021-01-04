@@ -34,6 +34,7 @@ if ($opsi == "Pengembalian") {
         <?php
         }
         $update = mysqli_query($connection, "UPDATE buku SET STOK_BUKU = $stok_buku WHERE ID_BUKU = $id_buku");
+        $delete = mysqli_query($connection, "DELETE FROM peminjaman WHERE ID_ANGGOTA = $id_anggota");
         ?>
         <script>
             alert("Buku Berhasil Dikembalikan");
