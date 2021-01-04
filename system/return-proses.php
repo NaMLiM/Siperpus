@@ -55,7 +55,7 @@ if ($opsi == "Pengembalian") {
             $batas = $row['BATAS_PENGEMBALIAN'];
         }
         $limit = date('Y-m-d', strtotime($batas . ' +3 day'));
-        $update = mysqli_query($connection, "UPDATE peminjaman SET BATAS_PENGEMBALIAN = $limit WHERE ID_PEMINJAMAN = $id_peminjaman");
+        $update = mysqli_query($connection, "UPDATE peminjaman SET BATAS_PENGEMBALIAN = '$limit' WHERE ID_PEMINJAMAN = $id_peminjaman");
         if ($update) {
         ?>
             <script>
