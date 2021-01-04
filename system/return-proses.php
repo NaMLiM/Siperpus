@@ -21,11 +21,12 @@ if ($opsi == "Pengembalian") {
             $stok = $row['STOK_BUKU'];
         }
         $stok_buku = (int)$stok + 1;
-        $select = mysqli_query($connection, "Select BATAS_PENGEMBALIAN FROM peminjaman WHERE ID_PEMINJAMAN = $id_peminjaman");
+        $select = mysqli_query($connection, "SELECT BATAS_PENGEMBALIAN FROM peminjaman WHERE ID_PEMINJAMAN = $id_peminjaman");
         $select = mysqli_query($connection, "SELECT STOK_BUKU FROM buku WHERE ID_BUKU = $id_buku");
         while ($row = mysqli_fetch_assoc($select)) {
             $date = $row['BATAS_PENGEMBALIAN'];
         }
+        $date = new DateTime($date);
         if ($datenow > $date) {
 ?>
             <script>
