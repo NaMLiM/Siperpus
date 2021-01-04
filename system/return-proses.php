@@ -1,18 +1,16 @@
 <?php
 include("koneksi.php");
 
-$id_buku = $_POST["ID_Buku"];
-$nik = $_POST["NIK"];
+$id_buku = $_POST["ID_Peminjaman"];
 $datenow = date("Y-m-d");
-$limit = date('Y-m-d', strtotime('+3 days'));
 
-$insert = mysqli_query($connection, "INSERT INTO peminjaman VALUES (null, '$id_buku', '$nik', '$datenow', '$limit')");
+$insert = mysqli_query($connection, "INSERT INTO pengembalian VALUES (null, '$id_peminjaman', '$datenow')");
 if ($insert) {
     $select = mysqli_query($connection, "SELECT STOK_BUKU FROM buku WHERE ID_BUKU = $id_buku");
     while ($row = mysqli_fetch_assoc($select)) {
         $stok = $row['STOK_BUKU'];
     }
-    $stok_buku = (int)$stok - 1;
+    $stok_buku = (int)$stok + 1;
     $update = mysqli_query($connection, "UPDATE buku SET STOK_BUKU = $stok_buku WHERE ID_BUKU = $id_buku");
 ?>
     <script>
