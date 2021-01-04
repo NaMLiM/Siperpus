@@ -50,11 +50,11 @@ if ($opsi == "Pengembalian") {
     }
 } else if ($opsi == "Perpanjangan") {
     if (mysqli_num_rows($select) > 0) {
-        $select = mysqli_query($connection, "Select BATAS_PENGEMBALIAN FROM peminjaman WHERE ID_PEMINJAMAN = $id_peminjaman");
+        $select = mysqli_query($connection, "SELECT BATAS_PENGEMBALIAN FROM peminjaman WHERE ID_PEMINJAMAN = $id_peminjaman");
         while ($row = mysqli_fetch_assoc($select)) {
             $batas = $row['BATAS_PENGEMBALIAN'];
         }
-        $limit = date('Y-m-d', strtotime($batas . ' +3 days'));
+        $limit = date('Y-m-d', strtotime($batas . ' +3 day'));
         $update = mysqli_query($connection, "UPDATE peminjaman SET BATAS_PENGEMBALIAN = $limit WHERE ID_PEMINJAMAN = $id_peminjaman");
         if ($update) {
         ?>
