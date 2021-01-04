@@ -2,11 +2,11 @@
 include("koneksi.php");
 
 $id_buku = $_POST["ID_Buku"];
-$nik = $_POST["NIK"];
+$id_anggota = $_POST["id_anggota"];
 $datenow = date("Y-m-d");
 $limit = date('Y-m-d', strtotime('+3 days'));
 
-$insert = mysqli_query($connection, "INSERT INTO peminjaman VALUES (null, '$id_buku', '$nik', '$datenow', '$limit')");
+$insert = mysqli_query($connection, "INSERT INTO peminjaman VALUES (null, '$id_buku', '$id_anggota', '$datenow', '$limit')");
 if ($insert) {
     $select = mysqli_query($connection, "SELECT STOK_BUKU FROM buku WHERE ID_BUKU = $id_buku");
     while ($row = mysqli_fetch_assoc($select)) {

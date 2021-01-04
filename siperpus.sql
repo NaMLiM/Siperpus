@@ -48,7 +48,7 @@ INSERT INTO `admin` (`ID_ADMIN`, `NAMA_ADMIN`, `USERNAME`, `PASSWORD`) VALUES
 --
 
 CREATE TABLE `anggota` (
-  `NIK` bigint(16) NOT NULL,
+  `ID_ANGGOTA` bigint(16) NOT NULL,
   `NAMA_ANGGOTA` varchar(1024) DEFAULT NULL,
   `NOHP_ANGGOTA` varchar(1024) DEFAULT NULL,
   `USERNAME_ANGGOTA` varchar(1024) DEFAULT NULL,
@@ -59,8 +59,8 @@ CREATE TABLE `anggota` (
 -- Dumping data untuk tabel `anggota`
 --
 
-INSERT INTO `anggota` (`NIK`, `NAMA_ANGGOTA`, `NOHP_ANGGOTA`, `USERNAME_ANGGOTA`, `PASSWORD_ANGGOTA`) VALUES
-(190441100128, 'Nafiul Anam', '082337604942', 'namlim', 'yeet');
+INSERT INTO `anggota` (`ID_ANGGOTA`, `NAMA_ANGGOTA`, `NOHP_ANGGOTA`, `USERNAME_ANGGOTA`, `PASSWORD_ANGGOTA`) VALUES
+(1, 'Nafiul Anam', '082337604942', 'namlim', 'yeet');
 
 -- --------------------------------------------------------
 
@@ -91,7 +91,7 @@ INSERT INTO `buku` (`ID_BUKU`, `NAMA_BUKU`, `PENULIS_BUKU`, `STOK_BUKU`) VALUES
 CREATE TABLE `peminjaman` (
   `ID_PEMINJAMAN` int(11) NOT NULL,
   `ID_BUKU` int(11) DEFAULT NULL,
-  `NIK` bigint(16) DEFAULT NULL,
+  `ID_ANGGOTA` bigint(16) DEFAULT NULL,
   `WAKTU_PEMINJAMAN` date DEFAULT NULL,
   `BATAS_PENGEMBALIAN` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -122,7 +122,7 @@ ALTER TABLE `admin`
 -- Indeks untuk tabel `anggota`
 --
 ALTER TABLE `anggota`
-  ADD PRIMARY KEY (`NIK`);
+  ADD PRIMARY KEY (`ID_ANGGOTA`);
 
 --
 -- Indeks untuk tabel `buku`
@@ -136,7 +136,7 @@ ALTER TABLE `buku`
 ALTER TABLE `peminjaman`
   ADD PRIMARY KEY (`ID_PEMINJAMAN`),
   ADD KEY `FK_PEMINJAM_RELATIONS_BUKU` (`ID_BUKU`),
-  ADD KEY `FK_PEMINJAM_RELATIONS_ANGGOTA` (`NIK`);
+  ADD KEY `FK_PEMINJAM_RELATIONS_ANGGOTA` (`ID_ANGGOTA`);
 
 --
 -- Indeks untuk tabel `pengembalian`
@@ -176,7 +176,7 @@ ALTER TABLE `pengembalian`
 --
 ALTER TABLE `peminjaman`
   ADD CONSTRAINT `FK_PEMINJAM_RELATIONS_BUKU` FOREIGN KEY (`ID_BUKU`) REFERENCES `buku` (`ID_BUKU`),
-  ADD CONSTRAINT `peminjaman_ibfk_1` FOREIGN KEY (`NIK`) REFERENCES `anggota` (`NIK`);
+  ADD CONSTRAINT `peminjaman_ibfk_1` FOREIGN KEY (`ID_ANGGOTA`) REFERENCES `anggota` (`ID_ANGGOTA`);
 
 --
 -- Ketidakleluasaan untuk tabel `pengembalian`

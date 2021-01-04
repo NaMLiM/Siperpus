@@ -1,13 +1,13 @@
 <?php
 include("koneksi.php");
 
-$nik = $_POST["NIK"];
+$id_anggota = $_POST["ID_Anggota"];
 $nama = $_POST["Nama"];
 $noHP = $_POST["NoHP"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-$insert = mysqli_query($connection, "INSERT INTO anggota VALUES ('$nik', '$nama', '$noHP', '$username', '$password')");
+$insert = mysqli_query($connection, "INSERT INTO anggota VALUES ('$id_anggota', '$nama', '$noHP', '$username', '$password')");
 
 if ($insert) {
 ?>

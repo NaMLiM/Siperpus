@@ -26,8 +26,8 @@
                     <form action="system/borrow-proses.php" method="post">
                         <div class="card-body">
                             <div class="form-group">
-                                <label>NIK</label>
-                                <input type="text" class="form-control" name="NIK" placeholder="Masukkan NIK">
+                                <label>ID Anggota</label>
+                                <input type="text" class="form-control" name="ID_Anggota" placeholder="Masukkan ID Anggota">
                             </div>
                             <div class="form-group">
                                 <label>ID Buku</label>

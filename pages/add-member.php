@@ -26,8 +26,8 @@
                     <form action="system/add-member-proses.php" method="post">
                         <div class="card-body">
                             <div class="form-group">
-                                <label>NIK</label>
-                                <input type="text" class="form-control" name="NIK" placeholder="Masukkan NIK">
+                                <label>ID Anggota</label>
+                                <input type="text" class="form-control" name="ID_Anggota" placeholder="Masukkan ID Anggota">
                             </div>
                             <div class="form-group">
                                 <label>Nama</label>
@@ -73,8 +73,8 @@
                                         <table class="table table-bordered table-hover dataTable dtr-inline" role="grid">
                                             <thead>
                                                 <tr role="row">
-                                                    <th class="sorting" tabindex="0" rowspan="1" colspan="1">Nama</th>
-                                                    <th class="sorting_desc" tabindex="0" rowspan="1" colspan="1" aria-sort="descending">NIK</th>
+                                                    <th class="sorting" tabindex="0" rowspan="1" colspan="1">ID Anggota</th>
+                                                    <th class="sorting_desc" tabindex="0" rowspan="1" colspan="1" aria-sort="descending">Nama</th>
                                                     <th class="sorting" tabindex="0" rowspan="1" colspan="1">No. HP</th>
                                                 </tr>
                                             </thead>
@@ -95,8 +95,8 @@
                                                 while ($data = mysqli_fetch_array($select)) {
                                                     echo "
                                 <tr role='row'>
-                                  <td class='dtr-control' tabindex='0'>" . $data["NAMA_ANGGOTA"] . "</td>
-                                  <td class='sorting_1'>" . $data["NIK"] . "</td>
+                                  <td class='dtr-control' tabindex='0'>" . $data["ID_ANGGOTA"] . "</td>
+                                  <td class='sorting_1'>" . $data["NAMA_ANGGOTA"] . "</td>
                                   <td>" . $data["NOHP_ANGGOTA"] . "</td>
                                 </tr>
                               ";
