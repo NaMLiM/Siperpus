@@ -1,3 +1,13 @@
+<?php
+if (!isset($_SESSION["nama_admin"])) {
+?>
+    <script>
+        alert("Anda Harus Login Terlebih Dahulu !");
+        document.location = "index.php";
+    </script>
+<?php
+}
+?>
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
