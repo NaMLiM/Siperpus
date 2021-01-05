@@ -36,7 +36,7 @@ if (!isset($_SESSION["nama_admin"])) {
                     <form action="system/add-member-proses.php" method="post">
                         <div class="card-body">
                             <div class="form-group">
-                                <label>ID Anggota</label>
+                                <label>ID Anggota (NIK)</label>
                                 <input type="text" class="form-control" name="ID_Anggota" placeholder="Masukkan ID Anggota">
                             </div>
                             <div class="form-group">
