@@ -11,7 +11,7 @@ $check_duplicate =  mysqli_query($connection, "SELECT ID_ANGGOTA, ID_BUKU FROM p
 $check_buku = mysqli_query($connection, "SELECT ID_BUKU FROM buku WHERE ID_BUKU = $id_buku");
 $check_anggota = mysqli_query($connection, "SELECT ID_ANGGOTA FROM anggota WHERE ID_ANGGOTA = $id_anggota");
 
-if (mysqli_num_rows($check_dublicate) > 0) {
+if (mysqli_num_rows($check_duplicate) > 0) {
 ?>
     <script>
         alert("Anda Tidak Dapat Meminjam Buku Yang Sama !");
