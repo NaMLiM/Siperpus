@@ -7,7 +7,7 @@ $datenow = date("Y-m-d");
 $limit = date('Y-m-d', strtotime('+30 days'));
 
 $check_anggota = mysqli_query($connection, "SELECT ID_ANGGOTA FROM peminjaman WHERE ID_ANGGOTA = $id_anggota");
-$check_buku =  mysqli_query($connection, "SELECT ID_ANGGOTA FROM peminjaman WHERE ID_ANGGOTA = $id_anggota AND ID_BUKU  = $id_buku");
+$check_buku =  mysqli_query($connection, "SELECT ID_ANGGOTA, ID_BUKU FROM peminjaman WHERE ID_ANGGOTA = $id_anggota AND ID_BUKU  = $id_buku");
 if (mysqli_num_rows($check_buku)) {
 ?>
     <script>
