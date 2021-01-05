@@ -30,23 +30,23 @@ if (!isset($_SESSION["nama_admin"])) {
 
   <!-- Main content -->
   <div class="content">
-   <div class="container-fluid">
-    <div class="row"> 
-      <div class="col-12">
-        <div class="card">
-          <div class="card-body">
-          <form class="form-inline ml-3">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-            <div class="dataTables_wrapper dt-bootstrap4">
-              <div class="row">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <form action="index.php?page=search-book" method="GET">
+                <div class="input-group">
+                  <input type="search" class="form-control form-control-lg" placeholder="Cari Buku" name="search">
+                  <div class="input-group-append">
+                    <button type="submit" class="btn btn-lg btn-default">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <div class="dataTables_wrapper dt-bootstrap4">
+                <div class="row">
                   <div class="col-sm-12">
                     <table class="table table-bordered table-hover dataTable dtr-inline" role="grid">
                       <thead>
@@ -66,11 +66,15 @@ if (!isset($_SESSION["nama_admin"])) {
                         $previous = $halaman - 1;
                         $next = $halaman + 1;
 
-                        $data = mysqli_query($connection, "select * from buku");
+                        $data = mysqli_query($connection, "SELECT * FROM buku");
                         $jumlah_data = mysqli_num_rows($data);
                         $total_halaman = ceil($jumlah_data / $batas);
-
-                        $select = mysqli_query($connection, "select * from buku limit $halaman_awal, $batas");
+                        if (isset($_GET["search"])) {
+                          $search = $_GET["search"];
+                          $select = mysqli_query($connection, "SELECT * FROM buku LIMIT $halaman_awal, $batas WHERE NAMA_BUKU = %$search%");
+                        } else {
+                          $select = mysqli_query($connection, "SELECT * FROM buku LIMIT $halaman_awal, $batas");
+                        }
                         while ($data = mysqli_fetch_array($select)) {
                           echo "
                               <tr role='row'>
