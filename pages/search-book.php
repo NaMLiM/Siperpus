@@ -71,7 +71,7 @@ if (!isset($_SESSION["nama_admin"])) {
                         $total_halaman = ceil($jumlah_data / $batas);
                         if (isset($_POST["search"])) {
                           $search = $_POST["search"];
-                          $select = mysqli_query($connection, "SELECT * FROM buku WHERE NAMA_BUKU LIKE '%$search%' LIMIT $halaman_awal, $batas");
+                          $select = mysqli_query($connection, "SELECT * FROM buku WHERE NAMA_BUKU LIKE '%$search%'");
                         } else {
                           $select = mysqli_query($connection, "SELECT * FROM buku LIMIT $halaman_awal, $batas");
                         }
@@ -90,33 +90,39 @@ if (!isset($_SESSION["nama_admin"])) {
                     </table>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-sm-12 col-md-12">
-                    <div class="dataTables_paginate paging_simple_numbers">
-                      <ul class="pagination">
-                        <li class="paginate_button page-item previous">
-                          <a <?php if ($halaman > 1) {
-                                echo "href='?page=search-book&halaman=$previous'";
-                              } ?> data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
-                        </li>
-                        <?php
-                        for ($x = 1; $x <= $total_halaman; $x++) {
-                        ?>
-                          <li class="paginate_button page-item">
-                            <a href="?page=search-book&halaman=<?php echo $x ?>" data-dt-idx="1" tabindex="0" class="page-link"><?php echo $x; ?></a>
+                <?php
+                if (isset($_POST["search"])) {
+                ?>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                      <div class="dataTables_paginate paging_simple_numbers">
+                        <ul class="pagination">
+                          <li class="paginate_button page-item previous">
+                            <a <?php if ($halaman > 1) {
+                                  echo "href='?page=search-book&halaman=$previous'";
+                                } ?> data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
                           </li>
-                        <?php
-                        }
-                        ?>
-                        <li class="paginate_button page-item next">
-                          <a <?php if ($halaman < $total_halaman) {
-                                echo "href='?page=search-book&halaman=$next'";
-                              } ?> data-dt-idx="7" tabindex="0" class="page-link">Next</a>
-                        </li>
-                      </ul>
+                          <?php
+                          for ($x = 1; $x <= $total_halaman; $x++) {
+                          ?>
+                            <li class="paginate_button page-item">
+                              <a href="?page=search-book&halaman=<?php echo $x ?>" data-dt-idx="1" tabindex="0" class="page-link"><?php echo $x; ?></a>
+                            </li>
+                          <?php
+                          }
+                          ?>
+                          <li class="paginate_button page-item next">
+                            <a <?php if ($halaman < $total_halaman) {
+                                  echo "href='?page=search-book&halaman=$next'";
+                                } ?> data-dt-idx="7" tabindex="0" class="page-link">Next</a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
-                </div>
+                <?php
+                }
+                ?>
               </div>
             </div>
             <!-- /.card-body -->
