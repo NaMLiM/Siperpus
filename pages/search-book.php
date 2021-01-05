@@ -21,10 +21,20 @@
   <!-- Main content -->
   <div class="content">
    <div class="container-fluid">
-    <div class="row">
+    <div class="row"> 
       <div class="col-12">
         <div class="card">
           <div class="card-body">
+          <form class="form-inline ml-3">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
             <div class="dataTables_wrapper dt-bootstrap4">
               <div class="row">
                   <div class="col-sm-12">
