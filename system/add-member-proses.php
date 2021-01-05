@@ -7,7 +7,7 @@ $noHP = $_POST["NoHP"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-if (!isset($_POST["ID_Anggota"])) {
+if ($id_anggota == "") {
 ?>
     <script>
         alert("NIK Wajib Diisi !");
