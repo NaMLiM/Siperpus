@@ -22,8 +22,14 @@ if (mysqli_num_rows($check_limit)) {
         alert("Anda Sudah Mencapai Batas Peminjaman !");
         document.location = "../index.php";
     </script>
-    <?php
+<?php
 } else if ($check_buku) {
+?>
+    <script>
+        alert("Buku Tidak Tersedia !");
+        document.location = "../index.php";
+    </script>
+    <?php
 } else {
     $select = mysqli_query($connection, "SELECT STOK_BUKU FROM buku WHERE ID_BUKU = $id_buku");
     while ($row = mysqli_fetch_assoc($select)) {
