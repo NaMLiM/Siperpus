@@ -23,35 +23,26 @@ if (mysqli_num_rows($check_buku)) {
     </script>
     <?php
 } else {
-    if ($insert) {
-        $select = mysqli_query($connection, "SELECT STOK_BUKU FROM buku WHERE ID_BUKU = $id_buku");
-        while ($row = mysqli_fetch_assoc($select)) {
-            $stok = $row['STOK_BUKU'];
-        }
-        $stok_buku = (int)$stok;
-        if ($stok_buku > 0) {
-            $insert = mysqli_query($connection, "INSERT INTO peminjaman VALUES (null, '$id_buku', '$id_anggota', '$datenow', '$limit')");
-            $stok_buku -= 1;
-            $update = mysqli_query($connection, "UPDATE buku SET STOK_BUKU = $stok_buku WHERE ID_BUKU = $id_buku");
-            if ($update) {
+    $select = mysqli_query($connection, "SELECT STOK_BUKU FROM buku WHERE ID_BUKU = $id_buku");
+    while ($row = mysqli_fetch_assoc($select)) {
+        $stok = $row['STOK_BUKU'];
+    }
+    $stok_buku = (int)$stok;
+    if ($stok_buku > 0) {
+        $insert = mysqli_query($connection, "INSERT INTO peminjaman VALUES (null, '$id_buku', '$id_anggota', '$datenow', '$limit')");
+        $stok_buku -= 1;
+        $update = mysqli_query($connection, "UPDATE buku SET STOK_BUKU = $stok_buku WHERE ID_BUKU = $id_buku");
+        if ($update) {
     ?>
-                <script>
-                    alert("Peminjaman Berhasil !");
-                    document.location = "../index.php";
-                </script>
-            <?php
-            } else {
-            ?>
-                <script>
-                    alert("Stok Buku Gagal DiUpdate !");
-                    document.location = "../index.php";
-                </script>
-            <?php
-            }
-        } else {
-            ?>
             <script>
-                alert("Stok Buku Habis !");
+                alert("Peminjaman Berhasil !");
+                document.location = "../index.php";
+            </script>
+        <?php
+        } else {
+        ?>
+            <script>
+                alert("Stok Buku Gagal DiUpdate !");
                 document.location = "../index.php";
             </script>
         <?php
@@ -59,8 +50,8 @@ if (mysqli_num_rows($check_buku)) {
     } else {
         ?>
         <script>
-            alert("Peminjaman Gagal !");
-            document.location = "../index.php?page=borrow-book";
+            alert("Stok Buku Habis !");
+            document.location = "../index.php";
         </script>
 <?php
     }
