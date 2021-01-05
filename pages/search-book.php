@@ -27,7 +27,7 @@ if (!isset($_SESSION["nama_admin"])) {
     </div><!-- /.container-fluid -->
   </div>
   <!-- /.content-header -->
-  <button type="reset" class="btn btn-primary">Reset Pencarian</button>
+
   <!-- Main content -->
   <div class="content">
     <div class="container-fluid">
@@ -118,6 +118,16 @@ if (!isset($_SESSION["nama_admin"])) {
                           </li>
                         </ul>
                       </div>
+                    </div>
+                  </div>
+                <?php
+                } else {
+                ?>
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                      <a href="index.php?page=search-book">
+                        <button type="button" class="btn btn-primary">Reset Pencarian</button>
+                      </a>
                     </div>
                   </div>
                 <?php
