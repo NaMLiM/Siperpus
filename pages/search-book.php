@@ -35,7 +35,7 @@ if (!isset($_SESSION["nama_admin"])) {
         <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <form action="index.php?page=search-book" method="GET">
+              <form action="index.php?page=search-book" method="POST">
                 <div class="input-group">
                   <input type="search" class="form-control form-control-lg" placeholder="Cari Buku" name="search">
                   <div class="input-group-append">
@@ -69,8 +69,8 @@ if (!isset($_SESSION["nama_admin"])) {
                         $data = mysqli_query($connection, "SELECT * FROM buku");
                         $jumlah_data = mysqli_num_rows($data);
                         $total_halaman = ceil($jumlah_data / $batas);
-                        if (isset($_GET["search"])) {
-                          $search = $_GET["search"];
+                        if (isset($_POST["search"])) {
+                          $search = $_POST["search"];
                           $select = mysqli_query($connection, "SELECT * FROM buku LIMIT $halaman_awal, $batas WHERE NAMA_BUKU = %$search%");
                         } else {
                           $select = mysqli_query($connection, "SELECT * FROM buku LIMIT $halaman_awal, $batas");
