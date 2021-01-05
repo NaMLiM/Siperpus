@@ -4,13 +4,21 @@ include("koneksi.php");
 $id_buku = $_POST["ID_Buku"];
 $id_anggota = $_POST["ID_Anggota"];
 $datenow = date("Y-m-d");
-$limit = date('Y-m-d', strtotime('+3 days'));
+$limit = date('Y-m-d', strtotime('+30 days'));
 
-$check = mysqli_query($connection, "SELECT ID_ANGGOTA FROM peminjaman WHERE ID_ANGGOTA = $id_anggota");
-if (mysqli_num_rows($check) > 0) {
+$check_anggota = mysqli_query($connection, "SELECT ID_ANGGOTA FROM peminjaman WHERE ID_ANGGOTA = $id_anggota");
+$check_buku =  mysqli_query($connection, "SELECT ID_ANGGOTA FROM peminjaman WHERE ID_ANGGOTA = $id_anggota AND ID_BUKU  = $id_buku");
+if (mysqli_num_rows($check_buku)) {
 ?>
     <script>
-        alert("Anda Sudah Meminjam !");
+        alert("Anda Tidak Dapat Meminjam Buku Yang Sama !");
+        document.location = "../index.php";
+    </script>
+<?php
+} else if (mysqli_num_rows($check_anggota) >= 5) {
+?>
+    <script>
+        alert("Anda Sudah Mencapai Batas Peminjaman !");
         document.location = "../index.php";
     </script>
     <?php
