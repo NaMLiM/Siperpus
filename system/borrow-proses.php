@@ -21,10 +21,19 @@ if (mysqli_num_rows($check) > 0) {
         while ($row = mysqli_fetch_assoc($select)) {
             $stok = $row['STOK_BUKU'];
         }
-        $stok_buku = (int)$stok - 1;
+        $stok_buku = (int)$stok;
+        if ($stok_buku == 0) {
+    ?>
+            <script>
+                alert("Stok Buku Habis !");
+                document.location = "../index.php";
+            </script>
+        <?php
+        }
+        $stok_buku -= 1;
         $update = mysqli_query($connection, "UPDATE buku SET STOK_BUKU = $stok_buku WHERE ID_BUKU = $id_buku");
         if ($update) {
-    ?>
+        ?>
             <script>
                 alert("Peminjaman Berhasil !");
                 document.location = "../index.php";
