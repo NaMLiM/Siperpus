@@ -23,7 +23,6 @@ if (mysqli_num_rows($check_buku)) {
     </script>
     <?php
 } else {
-    $insert = mysqli_query($connection, "INSERT INTO peminjaman VALUES (null, '$id_buku', '$id_anggota', '$datenow', '$limit')");
     if ($insert) {
         $select = mysqli_query($connection, "SELECT STOK_BUKU FROM buku WHERE ID_BUKU = $id_buku");
         while ($row = mysqli_fetch_assoc($select)) {
@@ -31,6 +30,7 @@ if (mysqli_num_rows($check_buku)) {
         }
         $stok_buku = (int)$stok;
         if ($stok_buku > 0) {
+            $insert = mysqli_query($connection, "INSERT INTO peminjaman VALUES (null, '$id_buku', '$id_anggota', '$datenow', '$limit')");
             $stok_buku -= 1;
             $update = mysqli_query($connection, "UPDATE buku SET STOK_BUKU = $stok_buku WHERE ID_BUKU = $id_buku");
             if ($update) {
