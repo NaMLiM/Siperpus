@@ -91,7 +91,7 @@ if (!isset($_SESSION["nama_admin"])) {
                   </div>
                 </div>
                 <?php
-                if (isset($_POST["search"])) {
+                if (!isset($_POST["search"])) {
                 ?>
                   <div class="row">
                     <div class="col-sm-12 col-md-12">
