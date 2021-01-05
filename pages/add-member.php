@@ -37,23 +37,23 @@ if (!isset($_SESSION["nama_admin"])) {
                         <div class="card-body">
                             <div class="form-group">
                                 <label>ID Anggota (NIK)</label>
-                                <input type="text" class="form-control" name="ID_Anggota" placeholder="Masukkan ID Anggota">
+                                <input type="text" class="form-control" name="ID_Anggota" placeholder="Masukkan ID Anggota" required>
                             </div>
                             <div class="form-group">
                                 <label>Nama</label>
-                                <input class="form-control" type="text" name="Nama" placeholder="Masukkan nama">
+                                <input class="form-control" type="text" name="Nama" placeholder="Masukkan Nama" required>
                             </div>
                             <div class="form-group">
                                 <label>Nomor Telepon</label>
-                                <input class="form-control" type="text" name="NoHP" placeholder="Masukkan nomor telepon">
+                                <input class="form-control" type="text" name="NoHP" placeholder="Masukkan Nomor Telepon" required>
                             </div>
                             <div class="form-group">
                                 <label>Username</label>
-                                <input class="form-control" type="text" name="username" placeholder="Masukkan Username">
+                                <input class="form-control" type="text" name="username" placeholder="Masukkan Username" required>
                             </div>
                             <div class="form-group">
                                 <label>Password</label>
-                                <input type="password" class="form-control" name="password" placeholder="Masukkan Password">
+                                <input type="password" class="form-control" name="password" placeholder="Masukkan Password" required>
                             </div>
                         </div>
                         <!-- /.card-body -->

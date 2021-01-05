@@ -37,11 +37,11 @@ if (!isset($_SESSION["nama_admin"])) {
                         <div class="card-body">
                             <div class="form-group">
                                 <label>ID Anggota</label>
-                                <input type="text" class="form-control" name="ID_Anggota" placeholder="Masukkan ID Anggota">
+                                <input type="text" class="form-control" name="ID_Anggota" placeholder="Masukkan ID Anggota" required>
                             </div>
                             <div class="form-group">
                                 <label>ID Buku</label>
-                                <input class="form-control" type="text" name="ID_Buku" placeholder="Masukkan ID Buku">
+                                <input class="form-control" type="text" name="ID_Buku" placeholder="Masukkan ID Buku" required>
                             </div>
                         </div>
                         <!-- /.card-body -->
