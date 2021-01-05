@@ -71,7 +71,7 @@ if (!isset($_SESSION["nama_admin"])) {
                         $total_halaman = ceil($jumlah_data / $batas);
                         if (isset($_POST["search"])) {
                           $search = $_POST["search"];
-                          $select = mysqli_query($connection, "SELECT * FROM buku LIMIT $halaman_awal, $batas WHERE NAMA_BUKU = %$search%");
+                          $select = mysqli_query($connection, "SELECT * FROM buku LIMIT $halaman_awal, $batas WHERE NAMA_BUKU LIKE '%$search%'");
                         } else {
                           $select = mysqli_query($connection, "SELECT * FROM buku LIMIT $halaman_awal, $batas");
                         }
