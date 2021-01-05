@@ -6,17 +6,19 @@ $id_anggota = $_POST["ID_Anggota"];
 $datenow = date("Y-m-d");
 $limit = date('Y-m-d', strtotime('+30 days'));
 
-$check_anggota = mysqli_query($connection, "SELECT * FROM peminjaman WHERE ID_ANGGOTA = $id_anggota");
-$check_limit =  mysqli_query($connection, "SELECT * FROM peminjaman WHERE ID_ANGGOTA = $id_anggota AND ID_BUKU  = $id_buku");
-$check_buku = mysqli_query($connection, "SELECT * FROM peminjaman WHERE ID_BUKU = $id_buku");
-if (mysqli_num_rows($check_limit) > 0) {
+$check_limit = mysqli_query($connection, "SELECT ID_ANGGOTA FROM peminjaman WHERE ID_ANGGOTA = $id_anggota");
+$check_duplicate =  mysqli_query($connection, "SELECT ID_ANGGOTA, ID_BUKU FROM peminjaman WHERE ID_ANGGOTA = $id_anggota AND ID_BUKU  = $id_buku");
+$check_buku = mysqli_query($connection, "SELECT ID_BUKU FROM buku WHERE ID_BUKU = $id_buku");
+$check_anggota = mysqli_query($connection, "SELECT ID_ANGGOTA FROM anggota WHERE ID_ANGGOTA = $id_anggota");
+
+if (mysqli_num_rows($check_dublicate) > 0) {
 ?>
     <script>
         alert("Anda Tidak Dapat Meminjam Buku Yang Sama !");
         document.location = "../index.php";
     </script>
 <?php
-} else if (mysqli_num_rows($check_anggota) >= 5) {
+} else if (mysqli_num_rows($check_limit) >= 5) {
 ?>
     <script>
         alert("Anda Sudah Mencapai Batas Peminjaman !");
@@ -27,6 +29,13 @@ if (mysqli_num_rows($check_limit) > 0) {
 ?>
     <script>
         alert("Buku Tidak Tersedia !");
+        document.location = "../index.php";
+    </script>
+<?php
+} else if (mysqli_num_rows($check_anggota) <= 0) {
+?>
+    <script>
+        alert("Anggota Tidak Ada !");
         document.location = "../index.php";
     </script>
     <?php
