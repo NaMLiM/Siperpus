@@ -27,7 +27,7 @@ if (!isset($_SESSION["nama_admin"])) {
     </div><!-- /.container-fluid -->
   </div>
   <!-- /.content-header -->
-
+  <button type="reset" class="btn btn-primary">Reset Pencarian</button>
   <!-- Main content -->
   <div class="content">
     <div class="container-fluid">
