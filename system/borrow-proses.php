@@ -7,8 +7,9 @@ $datenow = date("Y-m-d");
 $limit = date('Y-m-d', strtotime('+30 days'));
 
 $check_anggota = mysqli_query($connection, "SELECT ID_ANGGOTA FROM peminjaman WHERE ID_ANGGOTA = $id_anggota");
-$check_buku =  mysqli_query($connection, "SELECT ID_ANGGOTA, ID_BUKU FROM peminjaman WHERE ID_ANGGOTA = $id_anggota AND ID_BUKU  = $id_buku");
-if (mysqli_num_rows($check_buku)) {
+$check_limit =  mysqli_query($connection, "SELECT ID_ANGGOTA FROM peminjaman WHERE ID_ANGGOTA = $id_anggota AND ID_BUKU  = $id_buku");
+$check_buku = mysqli_query($connection, "SELECT ID_BUKU FROM peminjaman WHERE ID_BUKU = $id_buku");
+if (mysqli_num_rows($check_limit)) {
 ?>
     <script>
         alert("Anda Tidak Dapat Meminjam Buku Yang Sama !");
@@ -22,6 +23,7 @@ if (mysqli_num_rows($check_buku)) {
         document.location = "../index.php";
     </script>
     <?php
+} else if ($check_buku) {
 } else {
     $select = mysqli_query($connection, "SELECT STOK_BUKU FROM buku WHERE ID_BUKU = $id_buku");
     while ($row = mysqli_fetch_assoc($select)) {
